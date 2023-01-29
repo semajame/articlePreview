@@ -1,0 +1,241 @@
+/* 
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+- Very Dark Grayish Blue: hsl(217, 19%, 35%)
+- Desaturated Dark Blue: hsl(214, 17%, 51%)
+- Grayish Blue: hsl(212, 23%, 69%)
+- Light Grayish Blue: hsl(210, 46%, 95%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 13px
+
+### Headings
+
+    font-family: 'Manrope', sans-serif;
+
+- Family: [Manrope](https://fonts.google.com/specimen/Manrope)
+- Weights: 500, 700 */
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+body{
+    font-family: 'Manrope', sans-serif;
+    background-color: gray;
+}
+
+main{
+    margin: 5rem;
+    display: grid;
+    place-items: center;
+}
+
+.container{
+    background-color: #fff;
+    display: flex;
+    border-radius: 0.8rem;
+}
+
+.drawer_img{
+    border-radius: 0.8rem 0rem 0rem 0.8rem;
+    width: 30rem;
+    height: 100%;
+}
+
+.right_container{
+    padding: 2rem;
+}
+
+article h1{
+    padding-bottom: 1.8rem;
+    font-size: 1.7rem;
+    color: hsl(217, 19%, 35%);
+    max-width: 28rem;
+}
+
+article p{
+    color: hsl(214, 17%, 51%);
+    line-height: 1.6rem;
+    max-width: 27rem;
+}
+
+.profile{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile_flex{
+    display: flex;
+}
+
+.avatar{
+    border-radius: 100%;
+    height: 3rem;
+}
+
+.name_date{
+    padding-left: 1rem;
+}
+
+.name{
+    font-weight: 700;
+    color: hsl(217, 19%, 35%);
+    padding-bottom: 0.175rem;
+}
+
+.date{
+    font-size: 0.9rem;
+    color: hsla(212, 16%, 55%, 0.658);
+}
+
+.share_icon{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.share_background{
+   padding: 0.6rem;
+   margin-right: 1rem;
+   background-color: hsl(213, 37%, 91%);
+   border-radius: 100%;
+}
+
+.share_background:hover{
+   cursor: pointer;
+   background-color: hsl(217, 19%, 35%);
+}
+
+.share_socials_container{
+    position: fixed;
+    margin-top: -100px;
+    margin-left: 300px;
+}
+
+.share_socials{
+    border-radius: 0.7rem;
+    display: none;
+    padding: 0.7rem 2rem;
+    background-color: hsl(217, 19%, 35%);
+    transition: 300ms ease-in-out;
+}
+
+.share_socials.active{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.share_socials p{
+    color: hsl(212, 23%, 69%);
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 0.8rem;
+    padding-right: 0.2rem;
+    letter-spacing: 0.3rem;
+}
+
+.socials{
+    padding: 0.4rem;
+    cursor: pointer;
+}
+
+.mobile_share_background{
+    display: none;
+}
+
+.mobile_social_container{
+    display: none;
+}
+
+/*MEDIA*/
+
+@media screen and (max-width: 1150px){
+    
+        
+    .container{
+        flex-direction: column;
+        width: 450px;
+    }
+
+    .drawer_img{
+        border-radius: 0.8rem 0.8rem 0rem 0rem;
+        width: 100%;
+        height: 100%;
+    }
+
+    .right_container{
+        padding: 3rem 2.5rem 2.5rem 2.5rem;
+    }
+
+    article h1{
+        font-size: 1.5rem;
+    }
+
+    .share_background{
+        display: none;
+    }
+
+    .mobile_share_background{
+        display: block;
+        padding: 0.6rem;
+        margin-right: 1rem;
+        background-color: hsl(213, 37%, 91%);
+        border-radius: 100%;
+        cursor: pointer;
+        z-index: 3;
+    }
+
+    .mobile_social_container{
+        display: block;
+        position: fixed;
+        margin-top: -3.5625rem;
+        margin-left: -2.5rem;
+        border-radius: 0 0 0.8rem 0.8rem;
+        width: 28.15rem;
+        background-color: hsl(217, 19%, 35%);
+        transition: 300ms ease-in-out;
+    }
+
+    .mobile_socials.active{
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        padding: 1rem 0rem 2.9rem 2rem;
+    }
+
+    .mobile_socials{
+       display: none;
+    }
+
+    .mobile_socials p{
+        color: hsl(212, 23%, 69%);
+        text-transform: uppercase;
+        font-size: 0.8rem;
+        padding-right: 0.5rem;
+        padding-left: 1rem;
+        letter-spacing: 0.4rem;
+    }
+
+    .socials{
+        width: 2.3rem;
+    }
+
+}
